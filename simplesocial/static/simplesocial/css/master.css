@@ -1,0 +1,209 @@
+:root {
+  --white: #FFFFFF;
+  --red: #8E0E00;
+  --grey: #E3E3E3;
+  --black: #1F1C18;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  /* overflow: hidden; */
+  background: #8E0E00;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #1F1C18, #8E0E00);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ;
+  color: var(--grey);
+  margin: 0px;
+  font-family: 'segoe ui';
+  height: 100vh;
+}
+
+/* navbar */
+
+.nav {
+  height: 65px;
+  width: 100%;
+  background-color: var(--black);
+  -webkit-box-shadow: 2px 14px 48px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 14px 48px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 14px 48px -1px rgba(0, 0, 0, 0.75);
+  position: relative;
+  padding: 5px 20px 0px 20px;
+  border-radius: 0px 0px 5px 5px;
+
+}
+
+.nav>.nav-header {
+  display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav>.nav-btn {
+  display: none;
+}
+
+.nav>.nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav>.nav-links>a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav>.nav-links>a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav>#nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav>.nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .nav>.nav-btn>label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+
+  .nav>.nav-btn>label:hover,
+  .nav #nav-check:checked~.nav-btn>label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .nav>.nav-btn>label>span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+
+  .nav>.nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+
+  .nav>.nav-links>a {
+    display: block;
+    width: 100%;
+  }
+
+  .nav>#nav-check:not(:checked)~.nav-links {
+    height: 0px;
+  }
+
+  .nav>#nav-check:checked~.nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+/* navbar-end */
+
+.intro {
+  margin-top: 15rem;
+  cursor: default;
+}
+
+#note {
+  position: absolute;
+  color: rgba(249, 241, 204, 1);
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  margin: auto;
+  text-align: center;
+  user-select: none;
+  font-family: Arial;
+}
+
+/* index-html */
+/* name */
+.My_n {
+  position: relative;
+  /* display: inline; */
+  transition: 500ms;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.My_n::before {
+  content: "eepa";
+  position: absolute;
+  left: 100%;
+  visibility: hidden;
+  transition: visiblity 1000ms 300ms;
+}
+
+.My_n::after {
+  content: "K";
+  position: absolute;
+  left: 100%;
+  transition: 600ms;
+  color: var(--white);
+}
+
+.My_n:hover::before {
+  visibility: visible;
+  transition: visiblity 1000ms 300ms;
+  color: var(--grey);
+  border-bottom: 3px solid red;
+}
+
+.My_n:hover {
+  color: red;
+  text-decoration: none;
+}
+
+.My_n:hover::after {
+  left: 405%;
+  color: red;
+}
+
+/* name-end */
+/* intro */
+
+/* Log-in */
+.lin {
+  margin-top: -100px;
+  margin-left: 100px;
+  /* padding: 10px 100px 0px 100px; */
+  text-align: center;
+  height: 100vh;
+  width: 50vw;
+}
